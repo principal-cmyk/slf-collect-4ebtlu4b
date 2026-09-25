@@ -1,6 +1,6 @@
 /* Silverleaf Collector service worker — offline support.
    When updating the app, bump CACHE_VERSION so phones fetch the new files. */
-const CACHE_VERSION = 'slf-v1.2.1';
+const CACHE_VERSION = 'slf-v1.3.1';
 const ASSETS = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './icon-180.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE_VERSION).then(c => c.addAll(ASSETS)).then(() => self.skipWaiting()));
